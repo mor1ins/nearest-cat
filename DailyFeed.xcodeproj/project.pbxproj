@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		060D64881E31EB400053F2AB /* DailySourceItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060D64871E31EB400053F2AB /* DailySourceItemLayout.swift */; };
-		062169591E260AE800ECB0AB /* DailySourceItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062169571E260AE800ECB0AB /* DailySourceItemCell.swift */; };
-		0621695A1E260AE800ECB0AB /* DailySourceItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 062169581E260AE800ECB0AB /* DailySourceItemCell.xib */; };
 		063504FC1E151C4A002510B0 /* DFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063504FB1E151C4A002510B0 /* DFSafariViewController.swift */; };
 		0635050E1E1BA50E002510B0 /* TSSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635050D1E1BA50D002510B0 /* TSSpinnerView.swift */; };
 		063505101E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635050F1E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift */; };
@@ -60,8 +58,6 @@
 		0606C7661E4C47A800D03739 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		060D64871E31EB400053F2AB /* DailySourceItemLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySourceItemLayout.swift; sourceTree = "<group>"; };
 		0618B76E1E40B74D00BC8096 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		062169571E260AE800ECB0AB /* DailySourceItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySourceItemCell.swift; sourceTree = "<group>"; };
-		062169581E260AE800ECB0AB /* DailySourceItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailySourceItemCell.xib; sourceTree = "<group>"; };
 		063504FB1E151C4A002510B0 /* DFSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFSafariViewController.swift; sourceTree = "<group>"; };
 		0635050D1E1BA50D002510B0 /* TSSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSSpinnerView.swift; sourceTree = "<group>"; };
 		0635050F1E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DailyFeedNewsController+UICollectionView.swift"; sourceTree = "<group>"; };
@@ -236,10 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				06D04C521E13945C0013B4AA /* DailyFeedItemCell.swift */,
-				062169571E260AE800ECB0AB /* DailySourceItemCell.swift */,
 				207A5C231E9C1C6E00E4FC45 /* DailyFeedDetailItemCell.swift */,
 				207A5C241E9C1C6E00E4FC45 /* DailyFeedDetailItemCell.xib */,
-				062169581E260AE800ECB0AB /* DailySourceItemCell.xib */,
 				06D04C531E13945C0013B4AA /* DailyFeedItemCell.xib */,
 			);
 			path = Cells;
@@ -338,7 +332,6 @@
 				06D04C291E1248DB0013B4AA /* LaunchScreen.storyboard in Resources */,
 				208C18271EA3CD81007BC052 /* Settings.bundle in Resources */,
 				06D04C261E1248DB0013B4AA /* Assets.xcassets in Resources */,
-				0621695A1E260AE800ECB0AB /* DailySourceItemCell.xib in Resources */,
 				06D04C241E1248DB0013B4AA /* Main.storyboard in Resources */,
 				207A5C261E9C1C6E00E4FC45 /* DailyFeedDetailItemCell.xib in Resources */,
 			);
@@ -475,7 +468,6 @@
 				20EA15751EA28C6700047523 /* Reach.swift in Sources */,
 				06C38FD01E35E43C004429DD /* Date+Relative.swift in Sources */,
 				2085CBC41EF9216900D26594 /* JSONDecodingError.swift in Sources */,
-				062169591E260AE800ECB0AB /* DailySourceItemCell.swift in Sources */,
 				06529E7D1E408DC6003DA45B /* NewsDetailViewController+StateRestoration.swift in Sources */,
 				068496AC1E23AA2900DBD5A6 /* UIViewControllerExtension.swift in Sources */,
 				06D04C1F1E1248DB0013B4AA /* AppDelegate.swift in Sources */,
