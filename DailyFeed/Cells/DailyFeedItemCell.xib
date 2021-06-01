@@ -25,8 +25,8 @@
                         <color key="backgroundColor" systemColor="darkTextColor"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cU-x5-Vmt">
-                        <rect key="frame" x="10" y="93" width="156" height="26.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                        <rect key="frame" x="10" y="72" width="156" height="48"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -34,8 +34,8 @@
                         </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3u-J2-aGH">
-                        <rect key="frame" x="10" y="129.5" width="156" height="19.5"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                        <rect key="frame" x="10" y="130" width="156" height="19"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -67,7 +67,7 @@
                 <outlet property="newsItemSourceLabel" destination="A3u-J2-aGH" id="DjY-z1-1lH"/>
                 <outlet property="newsItemTitleLabel" destination="8cU-x5-Vmt" id="ERl-jQ-yqc"/>
             </connections>
-            <point key="canvasLocation" x="202" y="130.5"/>
+            <point key="canvasLocation" x="201.59999999999999" y="129.98500749625188"/>
         </collectionViewCell>
     </objects>
     <resources>

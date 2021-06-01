@@ -1,10 +1,3 @@
-//
-//  DailyFeedItemCell.swift
-//  DailyFeed
-//
-//  Created by Sumit Paul on 28/12/16.
-//
-
 import UIKit
 
 class DailyFeedItemCell: UICollectionViewCell {

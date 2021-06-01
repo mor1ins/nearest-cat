@@ -14,8 +14,6 @@
 		0635050E1E1BA50E002510B0 /* TSSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635050D1E1BA50D002510B0 /* TSSpinnerView.swift */; };
 		063505101E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635050F1E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift */; };
 		064FA8F01E4DB76100693D12 /* BookmarkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064FA8EF1E4DB76000693D12 /* BookmarkActivity.swift */; };
-		064FA8F31E52D48900693D12 /* BookmarkItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064FA8F11E52D48800693D12 /* BookmarkItemsCell.swift */; };
-		064FA8F41E52D48900693D12 /* BookmarkItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064FA8F21E52D48800693D12 /* BookmarkItemsCell.xib */; };
 		064FA8FA1E5DA98000693D12 /* DailyFeedRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064FA8F91E5DA98000693D12 /* DailyFeedRealmModel.swift */; };
 		06529E7D1E408DC6003DA45B /* NewsDetailViewController+StateRestoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06529E7C1E408DC6003DA45B /* NewsDetailViewController+StateRestoration.swift */; };
 		068496AC1E23AA2900DBD5A6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068496AB1E23AA2900DBD5A6 /* UIViewControllerExtension.swift */; };
@@ -68,8 +66,6 @@
 		0635050D1E1BA50D002510B0 /* TSSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSSpinnerView.swift; sourceTree = "<group>"; };
 		0635050F1E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DailyFeedNewsController+UICollectionView.swift"; sourceTree = "<group>"; };
 		064FA8EF1E4DB76000693D12 /* BookmarkActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkActivity.swift; sourceTree = "<group>"; };
-		064FA8F11E52D48800693D12 /* BookmarkItemsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkItemsCell.swift; sourceTree = "<group>"; };
-		064FA8F21E52D48800693D12 /* BookmarkItemsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkItemsCell.xib; sourceTree = "<group>"; };
 		064FA8F91E5DA98000693D12 /* DailyFeedRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyFeedRealmModel.swift; sourceTree = "<group>"; };
 		06529E7C1E408DC6003DA45B /* NewsDetailViewController+StateRestoration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NewsDetailViewController+StateRestoration.swift"; sourceTree = "<group>"; };
 		068496AB1E23AA2900DBD5A6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -240,8 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				06D04C521E13945C0013B4AA /* DailyFeedItemCell.swift */,
-				064FA8F11E52D48800693D12 /* BookmarkItemsCell.swift */,
-				064FA8F21E52D48800693D12 /* BookmarkItemsCell.xib */,
 				062169571E260AE800ECB0AB /* DailySourceItemCell.swift */,
 				207A5C231E9C1C6E00E4FC45 /* DailyFeedDetailItemCell.swift */,
 				207A5C241E9C1C6E00E4FC45 /* DailyFeedDetailItemCell.xib */,
@@ -341,7 +335,6 @@
 			files = (
 				953C685821A071CC006750F8 /* IconTransitions.json in Resources */,
 				06D04C551E13945D0013B4AA /* DailyFeedItemCell.xib in Resources */,
-				064FA8F41E52D48900693D12 /* BookmarkItemsCell.xib in Resources */,
 				06D04C291E1248DB0013B4AA /* LaunchScreen.storyboard in Resources */,
 				208C18271EA3CD81007BC052 /* Settings.bundle in Resources */,
 				06D04C261E1248DB0013B4AA /* Assets.xcassets in Resources */,
@@ -481,7 +474,6 @@
 				064FA8FA1E5DA98000693D12 /* DailyFeedRealmModel.swift in Sources */,
 				20EA15751EA28C6700047523 /* Reach.swift in Sources */,
 				06C38FD01E35E43C004429DD /* Date+Relative.swift in Sources */,
-				064FA8F31E52D48900693D12 /* BookmarkItemsCell.swift in Sources */,
 				2085CBC41EF9216900D26594 /* JSONDecodingError.swift in Sources */,
 				062169591E260AE800ECB0AB /* DailySourceItemCell.swift in Sources */,
 				06529E7D1E408DC6003DA45B /* NewsDetailViewController+StateRestoration.swift in Sources */,
