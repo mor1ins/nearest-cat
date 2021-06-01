@@ -27,14 +27,14 @@ class NewsDetailViewController: UIViewController, SFSafariViewControllerDelegate
     @IBOutlet weak var newsImageView: TSImageView! {
         didSet {
             newsImageView.layer.masksToBounds = true
-            guard let imageURL = receivedNewsItem?.urlToImage else { return }
+            guard let imageURL = receivedNewsItem?.image else { return }
             newsImageView.downloadedFromLink(imageURL)
         }
     }
 
     @IBOutlet weak var newsTitleLabel: UILabel! {
         didSet {
-            newsTitleLabel.text = receivedNewsItem?.title
+            newsTitleLabel.text = receivedNewsItem?.name
             newsTitleLabel.alpha = 0.0
             if isLanguageRightToLeftDetailView {
                 newsTitleLabel.textAlignment = .right
@@ -46,7 +46,7 @@ class NewsDetailViewController: UIViewController, SFSafariViewControllerDelegate
 
     @IBOutlet weak var contentTextView: UITextView! {
         didSet {
-            contentTextView.text = receivedNewsItem?.articleDescription
+            contentTextView.text = receivedNewsItem?.catDescription
             contentTextView.alpha = 0.0
             contentTextView.font = UIFont.preferredFont(forTextStyle: .subheadline)
             contentTextView.sizeToFit()
@@ -91,10 +91,6 @@ class NewsDetailViewController: UIViewController, SFSafariViewControllerDelegate
     @IBOutlet weak var swipeLeftButton: UIButton! {
         didSet {
             swipeLeftButton.layer.cornerRadius = 10.0
-            guard let publishedDate = receivedNewsItem?.publishedAt.dateFromTimestamp?.relativelyFormatted(short: false) else {
-                return swipeLeftButton.setTitle("Read More...", for: .normal)
-            }
-            swipeLeftButton.setTitle("\(publishedDate) • Read More...", for: .normal)
             switch Reach().connectionStatus() {
             case .unknown, .offline:
                 swipeLeftButton.isEnabled = false

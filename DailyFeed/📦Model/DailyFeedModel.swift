@@ -17,27 +17,29 @@ enum DailyFeedModelError: Error {
     case invalidDailyFeedModel
 }
 
-struct Articles: Codable {
-    var articles: [DailyFeedModel]
+struct Cats: Codable {
+    var cats: [DailyFeedModel]
 }
 
 //Data Model
 final class DailyFeedModel: NSObject, Serializable {
     
-    public var title: String = ""
+    public var id: String = ""
+    public var name: String?
     public var author: String?
-    public var publishedAt: String?
-    public var urlToImage: String?
-    public var articleDescription: String?
-    public var url: String?
+    public var location: String?
+    public var catDescription: String?
+    public var image: String?
     
     private enum CodingKeys: String, CodingKey {
-        case articleDescription = "description"
-        case title, author, publishedAt, urlToImage, url
+        case catDescription = "description"
+        case id = "id"
+        case name = "name"
+        case author = "author"
+        case location = "location"
+        case image = "image"
     }
 }
-
-// MARK :- NSProvider read/write method implementations
 
 extension DailyFeedModel: NSItemProviderWriting {
     
@@ -47,7 +49,7 @@ extension DailyFeedModel: NSItemProviderWriting {
         if typeIdentifier == DailyFeedModelUTI.kUUTTypeDailyFeedModel {
             completionHandler(self.serialize(), nil)
         } else if typeIdentifier == kUTTypeUTF8PlainText as String {
-            completionHandler(self.url?.data(using: .utf8), nil)
+//            completionHandler(self.url?.data(using: .utf8), nil)
         } else {
             completionHandler(nil, DailyFeedModelError.invalidDailyFeedModel)
         }

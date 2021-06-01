@@ -1,10 +1,3 @@
-//
-//  DailyFeedNewsController+Extension.swift
-//  DailyFeed
-//
-//  Created by Sumit Paul on 03/01/17.
-//
-
 import UIKit
 import Foundation
 import MobileCoreServices

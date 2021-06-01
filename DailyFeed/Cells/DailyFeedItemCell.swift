@@ -34,10 +34,9 @@ class DailyFeedItemCell: UICollectionViewCell {
     }
     
     func configure(with newsitems: DailyFeedModel, ltr: Bool) {
-        self.newsItemTitleLabel.text = newsitems.title
+        self.newsItemTitleLabel.text = newsitems.name
         self.newsItemSourceLabel.text = newsitems.author
-        self.newsItemPublishedAtLabel.text = newsitems.publishedAt?.dateFromTimestamp?.relativelyFormatted(short: true)
-        if let imageURL = newsitems.urlToImage {
+        if let imageURL = newsitems.image {
             self.newsItemImageView.downloadedFromLink(imageURL)
         }
         if ltr {

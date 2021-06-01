@@ -140,12 +140,12 @@ class DailyFeedNewsController: UIViewController {
             firstly {
                 NewsAPI.getNewsItems(source: source)
             }.done { result in
-                self.newsItems = result.articles
+                self.newsItems = result.cats
                 self.navigationItem.title = self.sourceName
             }.ensure(on: .main) {
                 self.spinningActivityIndicator.stop()
                 self.refreshControl.endRefreshing()
-                }.catch(on: .main) { err in
+            }.catch(on: .main) { err in
                 self.showError(err.localizedDescription)
             }
         }
@@ -179,20 +179,20 @@ class DailyFeedNewsController: UIViewController {
 
     // MARK: - Unwind from Source View Controller
     @IBAction func unwindToDailyNewsFeed(_ segue: UIStoryboardSegue) {
-        if let sourceVC = segue.source as? NewsSourceViewController,
-            let selectedItem = sourceVC.selectedItem {
-            let sourceId = selectedItem.sid
-            sourceName = selectedItem.name
-            let status = Reach().connectionStatus()
-            isLanguageRightToLeft = sourceVC.selectedItem?.isoLanguageCode.direction == .rightToLeft
-            switch status {
-            case .unknown, .offline:
-                self.showErrorWithDelay("Your Internet Connection appears to be offline.")
-            case .online(.wwan), .online(.wiFi):
-                self.source = sourceId
-                loadNewsData(source)
-            }
-        }
+//        if let sourceVC = segue.source as? NewsSourceViewController,
+//            let selectedItem = sourceVC.selectedItem {
+//            let sourceId = selectedItem.sid
+//            sourceName = selectedItem.name
+//            let status = Reach().connectionStatus()
+//            isLanguageRightToLeft = sourceVC.selectedItem?.isoLanguageCode.direction == .rightToLeft
+//            switch status {
+//            case .unknown, .offline:
+//                self.showErrorWithDelay("Your Internet Connection appears to be offline.")
+//            case .online(.wwan), .online(.wiFi):
+//                self.source = sourceId
+//                loadNewsData(source)
+//            }
+//        }
     }
 }
 

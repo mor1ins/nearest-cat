@@ -28,17 +28,13 @@ extension NewsDetailViewController {
             coder.encode(newsAuthor, forKey: "newsAuthor")
         }
         
-        if let publishedDate = receivedNewsItem?.publishedAt {
-            coder.encode(publishedDate, forKey: "publishedDate")
-        }
-        
         if let url = self.articleStringURL {
             coder.encode(url, forKey: "newsURL")
         }
         
-        if let newsSource = newsSourceLabel.text {
-            coder.encode(newsSource, forKey: "newsSource")
-        }
+//        if let newsSource = newsSourceLabel.text {
+//            coder.encode(newsSource, forKey: "newsSource")
+//        }
         
         super.encodeRestorableState(with: coder)
     }
@@ -60,20 +56,20 @@ extension NewsDetailViewController {
             newsAuthorLabel.text = newsAuthorText
         }
         
-        if let publishedAtDate = coder.decodeObject(forKey: "publishedDate") as? String {
-            guard let publishedDate = publishedAtDate.dateFromTimestamp?.relativelyFormatted(short: false) else {
-                return swipeLeftButton.setTitle("Read More...", for: .normal)
-            }
-            swipeLeftButton.setTitle("\(publishedDate) • Read More...", for: .normal)
-        }
+//        if let publishedAtDate = coder.decodeObject(forKey: "publishedDate") as? String {
+//            guard let publishedDate = publishedAtDate.dateFromTimestamp?.relativelyFormatted(short: false) else {
+//                return swipeLeftButton.setTitle("Read More...", for: .normal)
+//            }
+//            swipeLeftButton.setTitle("\(publishedDate) • Read More...", for: .normal)
+//        }
+//
+//        if let urlString = coder.decodeObject(forKey: "newsURL") as? String {
+//            articleStringURL = urlString
+//        }
         
-        if let urlString = coder.decodeObject(forKey: "newsURL") as? String {
-            articleStringURL = urlString
-        }
-        
-        if let newsSource = coder.decodeObject(forKey: "newsSource") as? String {
-            newsSourceLabel.text = newsSource
-        }
+//        if let newsSource = coder.decodeObject(forKey: "newsSource") as? String {
+//            newsSourceLabel.text = newsSource
+//        }
         
         super.decodeRestorableState(with: coder)
     }
