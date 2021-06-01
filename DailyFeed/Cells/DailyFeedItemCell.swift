@@ -12,7 +12,7 @@ class DailyFeedItemCell: UICollectionViewCell {
     @IBOutlet weak var newsItemImageView: TSImageView!
     @IBOutlet weak var newsItemTitleLabel: UILabel!
     @IBOutlet weak var newsItemSourceLabel: UILabel!
-    @IBOutlet weak var newsItemPublishedAtLabel: UILabel!
+//    @IBOutlet weak var newsItemPublishedAtLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,16 +35,16 @@ class DailyFeedItemCell: UICollectionViewCell {
     
     func configure(with newsitems: DailyFeedModel, ltr: Bool) {
         self.newsItemTitleLabel.text = newsitems.name
-        self.newsItemSourceLabel.text = newsitems.author
+//        self.newsItemSourceLabel.text = newsitems.author
         if let imageURL = newsitems.image {
             self.newsItemImageView.downloadedFromLink(imageURL)
         }
         if ltr {
             self.newsItemTitleLabel.textAlignment = .right
-            self.newsItemSourceLabel.textAlignment = .right
+//            self.newsItemSourceLabel.textAlignment = .right
         } else {
             self.newsItemTitleLabel.textAlignment = .left
-            self.newsItemSourceLabel.textAlignment = .left
+//            self.newsItemSourceLabel.textAlignment = .left
         }
     }
 }

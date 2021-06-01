@@ -1,10 +1,3 @@
-//
-//  NewsDetailViewController.swift
-//  DailyFeed
-//
-//  Created by Sumit Paul on 27/12/16.
-//
-
 import UIKit
 import SafariServices
 import RealmSwift
@@ -102,21 +95,21 @@ class NewsDetailViewController: UIViewController, SFSafariViewControllerDelegate
         }
     }
 
-    @IBOutlet weak var newsSourceLabel: UILabel! {
-        didSet {
-            newsSourceLabel.text = receivedNewsSource
-        }
-    }
+//    @IBOutlet weak var newsSourceLabel: UILabel! {
+//        didSet {
+//            newsSourceLabel.text = receivedNewsSource
+//        }
+//    }
     
-    @IBOutlet weak var newsItemNumberLabel: UILabel! {
-        didSet {
-            guard let newsItemNumber = receivedItemNumber else { return }
-            newsItemNumberLabel.text = String(newsItemNumber)
-            newsItemNumberLabel.alpha = 1.0
-            newsItemNumberLabel.clipsToBounds = true
-            newsItemNumberLabel.layer.cornerRadius = 5.0
-        }
-    }
+//    @IBOutlet weak var newsItemNumberLabel: UILabel! {
+//        didSet {
+//            guard let newsItemNumber = receivedItemNumber else { return }
+//            newsItemNumberLabel.text = String(newsItemNumber)
+//            newsItemNumberLabel.alpha = 1.0
+//            newsItemNumberLabel.clipsToBounds = true
+//            newsItemNumberLabel.layer.cornerRadius = 5.0
+//        }
+//    }
 
     
     // MARK: - View Controller Lifecycle Methods
@@ -150,7 +143,7 @@ class NewsDetailViewController: UIViewController, SFSafariViewControllerDelegate
             self.newsTitleLabel.center.y -= 20
             self.newsAuthorLabel.alpha = 1.0
             self.newsAuthorLabel.center.y -= 20
-            self.newsItemNumberLabel.alpha = 1.0
+//            self.newsItemNumberLabel.alpha = 1.0
         })
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.contentTextView.center.y -= 20
