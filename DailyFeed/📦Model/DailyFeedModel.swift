@@ -7,6 +7,7 @@
 
 import Foundation
 import MobileCoreServices
+import YandexMapsMobile
 
 enum DailyFeedModelUTI {
     static let kUUTTypeDailyFeedModel = "kUUTTypeDailyFeedModel"
@@ -41,6 +42,12 @@ final class DailyFeedModel: NSObject, Serializable {
         case image = "image"
         case latitude = "latitude"
         case longitude = "longitude"
+    }
+
+    public func calcDistance(point: YMKPoint) {
+        let a = latitude?.distance(to: point.latitude)
+        let b = longitude?.distance(to: point.longitude)
+        distance = sqrt(pow(a!, 2.0) + pow(b!, 2.0))
     }
 }
 

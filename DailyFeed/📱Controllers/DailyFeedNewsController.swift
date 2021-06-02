@@ -11,7 +11,7 @@ import DZNEmptyDataSet
 import PromiseKit
 import YandexMapsMobile
 
-class DailyFeedNewsController: UIViewController, YMKUserLocationObjectListener {
+class DailyFeedNewsController: UIViewController {
     @IBOutlet weak var mapView: YMKMapView!
 
     var newsItems: [DailyFeedModel] = [] {
@@ -51,14 +51,34 @@ class DailyFeedNewsController: UIViewController, YMKUserLocationObjectListener {
     
     var isLanguageRightToLeft = Bool()
 
-    var location: YMKPoint?
+
+    var userLocation: YMKPoint? {
+        didSet {
+            guard userLocation != nil && userLocation?.latitude != 0 && userLocation?.longitude != 0 else { return }
+            print(userLocation)
+        }
+    }
+
+    var locationManager: YMKLocationManager?
 
     // MARK: - IBOutlets
+
+
 
     @IBOutlet weak var newsCollectionView: UICollectionView! {
         didSet {
             setupCollectionView()
         }
+    }
+
+
+    private func setupLocationManager() {
+        locationManager = YMKMapKit.sharedInstance().createLocationManager()
+//        locationManager!.subscribeForLocationUpdates(
+//                withDesiredAccuracy: 0, minTime: 1, minDistance: 0,
+//                allowUseInBackground: false, filteringMode: .on,
+//                locationListener: self)
+        locationManager?.requestSingleUpdate(withLocationListener: self)
     }
 
     // MARK: - View Controller Lifecycle Methods
@@ -67,6 +87,7 @@ class DailyFeedNewsController: UIViewController, YMKUserLocationObjectListener {
         super.viewDidLoad()
         //Setup UI
         setupUI()
+        setupLocationManager()
         //Populate CollectionView Data
         loadNewsData(source)
         Reach().monitorReachabilityChanges()
@@ -144,11 +165,10 @@ class DailyFeedNewsController: UIViewController, YMKUserLocationObjectListener {
             }.done { result in
                 self.newsItems = result.cats
                 self.navigationItem.title = self.sourceName
-//                self.newsItems = self.newsItems.map { cat -> DailyFeedModel in
-//                    cat.distance = sqrt(pow(cat.latitude!.distance(to: self.location!.latitude), 2.0))
-//                    return cat
-//                }
-//                self.newsItems.sort { a, b in a.distance < b.distance }
+                self.newsItems.forEach { cat in
+                    cat.calcDistance(point: self.userLocation!)
+                }
+                self.newsItems.sort { a, b in a.distance < b.distance }
             }.ensure(on: .main) {
                 self.spinningActivityIndicator.stop()
                 self.refreshControl.endRefreshing()
@@ -245,15 +265,13 @@ extension DailyFeedNewsController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegat
     func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView!) -> Bool {
         return true
     }
+}
 
 
-    func onObjectAdded(with view: YMKUserLocationView) {
-        location = view.pin.geometry
+extension DailyFeedNewsController: YMKLocationDelegate {
+    func onLocationUpdated(with location: YMKLocation) {
+        userLocation = YMKPoint(latitude: location.position.latitude, longitude: location.position.longitude)
     }
 
-    func onObjectRemoved(with view: YMKUserLocationView) {}
-
-    func onObjectUpdated(with view: YMKUserLocationView, event: YMKObjectEvent) {
-        location = view.pin.geometry
-    }
+    func onLocationStatusUpdated(with status: YMKLocationStatus) {}
 }
