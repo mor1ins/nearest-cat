@@ -31,6 +31,7 @@ final class DailyFeedModel: NSObject, Serializable {
     public var image: String?
     public var latitude: Float64?
     public var longitude: Float64?
+    public var distance: Float64 = 0.0
     
     private enum CodingKeys: String, CodingKey {
         case catDescription = "description"

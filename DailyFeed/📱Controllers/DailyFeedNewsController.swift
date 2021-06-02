@@ -9,10 +9,10 @@ import UIKit
 import Lottie
 import DZNEmptyDataSet
 import PromiseKit
+import YandexMapsMobile
 
-class DailyFeedNewsController: UIViewController {
-
-    // MARK: - Variable declaration
+class DailyFeedNewsController: UIViewController, YMKUserLocationObjectListener {
+    @IBOutlet weak var mapView: YMKMapView!
 
     var newsItems: [DailyFeedModel] = [] {
         didSet {
@@ -50,6 +50,8 @@ class DailyFeedNewsController: UIViewController {
     var selectedCell = UICollectionViewCell()
     
     var isLanguageRightToLeft = Bool()
+
+    var location: YMKPoint?
 
     // MARK: - IBOutlets
 
@@ -142,6 +144,11 @@ class DailyFeedNewsController: UIViewController {
             }.done { result in
                 self.newsItems = result.cats
                 self.navigationItem.title = self.sourceName
+//                self.newsItems = self.newsItems.map { cat -> DailyFeedModel in
+//                    cat.distance = sqrt(pow(cat.latitude!.distance(to: self.location!.latitude), 2.0))
+//                    return cat
+//                }
+//                self.newsItems.sort { a, b in a.distance < b.distance }
             }.ensure(on: .main) {
                 self.spinningActivityIndicator.stop()
                 self.refreshControl.endRefreshing()
@@ -237,5 +244,16 @@ extension DailyFeedNewsController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegat
     
     func emptyDataSetShouldAllowScroll(_ scrollView: UIScrollView!) -> Bool {
         return true
+    }
+
+
+    func onObjectAdded(with view: YMKUserLocationView) {
+        location = view.pin.geometry
+    }
+
+    func onObjectRemoved(with view: YMKUserLocationView) {}
+
+    func onObjectUpdated(with view: YMKUserLocationView, event: YMKObjectEvent) {
+        location = view.pin.geometry
     }
 }

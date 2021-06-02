@@ -3,10 +3,8 @@ import Foundation
 import PromiseKit
 
 enum NewsAPI {
-    
     static var baseURL = URLComponents(string: "https://60b6a11a17d1dc0017b88227.mockapi.io/")
-    
-    //NewsAPI.org API Endpoints
+
     static var url: URL? {
         NewsAPI.baseURL?.path = "/cat"
         guard let url = NewsAPI.baseURL?.url else { return nil }
