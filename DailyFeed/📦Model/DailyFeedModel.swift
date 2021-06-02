@@ -27,17 +27,19 @@ final class DailyFeedModel: NSObject, Serializable {
     public var id: String = ""
     public var name: String?
     public var author: String?
-    public var location: String?
     public var catDescription: String?
     public var image: String?
+    public var latitude: Float64?
+    public var longitude: Float64?
     
     private enum CodingKeys: String, CodingKey {
         case catDescription = "description"
         case id = "id"
         case name = "name"
         case author = "author"
-        case location = "location"
         case image = "image"
+        case latitude = "latitude"
+        case longitude = "longitude"
     }
 }
 
