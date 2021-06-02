@@ -237,17 +237,17 @@ class NewsDetailViewController: UIViewController, SFSafariViewControllerDelegate
 
     }
 
-    @IBAction func openArticleInSafari(_ sender: UIButton) {
-        openInSafari()
-    }
+//    @IBAction func openArticleInSafari(_ sender: UIButton) {
+//        openInSafari()
+//    }
 
     // Helper method to open articles in Safari
-    func openInSafari() {
-        guard let articleString = articleStringURL, let url = URL(string: articleString) else { return }
-        let svc = DFSafariViewController(url: url)
-        svc.delegate = self
-        self.present(svc, animated: true, completion: nil)
-    }
+//    func openInSafari() {
+//        guard let articleString = articleStringURL, let url = URL(string: articleString) else { return }
+//        let svc = DFSafariViewController(url: url)
+//        svc.delegate = self
+//        self.present(svc, animated: true, completion: nil)
+//    }
 }
 
 @available(iOS 11.0, *)

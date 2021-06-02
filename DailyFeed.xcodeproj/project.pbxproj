@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		060D64881E31EB400053F2AB /* DailySourceItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060D64871E31EB400053F2AB /* DailySourceItemLayout.swift */; };
-		063504FC1E151C4A002510B0 /* DFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063504FB1E151C4A002510B0 /* DFSafariViewController.swift */; };
 		0635050E1E1BA50E002510B0 /* TSSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635050D1E1BA50D002510B0 /* TSSpinnerView.swift */; };
 		063505101E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635050F1E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift */; };
 		064FA8F01E4DB76100693D12 /* BookmarkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064FA8EF1E4DB76000693D12 /* BookmarkActivity.swift */; };
@@ -36,8 +35,9 @@
 		208C18271EA3CD81007BC052 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 208C18261EA3CD81007BC052 /* Settings.bundle */; };
 		208FBB5B1EDB1C36009C2539 /* DailySourceItemiPadLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208FBB5A1EDB1C36009C2539 /* DailySourceItemiPadLayout.swift */; };
 		20EA15751EA28C6700047523 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EA15741EA28C6700047523 /* Reach.swift */; };
-		91DE4FD72666C66200AC6D25 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DE4FD62666C66200AC6D25 /* MapViewController.swift */; };
+		91DE4FE92667128C00AC6D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91DE4FE82667128C00AC6D25 /* Assets.xcassets */; };
 		953C685821A071CC006750F8 /* IconTransitions.json in Resources */ = {isa = PBXBuildFile; fileRef = 953C685721A071CC006750F8 /* IconTransitions.json */; };
+		AF59E8B4233D7FC548821E3B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59E046F0491DFBBD85B5BA /* MapViewController.swift */; };
 		BF3E3EF3B745B55ADCBE90FA /* Pods_DailyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F173573F8F2C56C6A3483F /* Pods_DailyFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,6 @@
 		0606C7661E4C47A800D03739 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		060D64871E31EB400053F2AB /* DailySourceItemLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySourceItemLayout.swift; sourceTree = "<group>"; };
 		0618B76E1E40B74D00BC8096 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		063504FB1E151C4A002510B0 /* DFSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DFSafariViewController.swift; sourceTree = "<group>"; };
 		0635050D1E1BA50D002510B0 /* TSSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSSpinnerView.swift; sourceTree = "<group>"; };
 		0635050F1E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DailyFeedNewsController+UICollectionView.swift"; sourceTree = "<group>"; };
 		064FA8EF1E4DB76000693D12 /* BookmarkActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkActivity.swift; sourceTree = "<group>"; };
@@ -96,8 +95,9 @@
 		58B2007D05E7918650A75085 /* Pods_DailyFeedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyFeedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC3839392D2356ACF37A1F7 /* Pods_News_Now.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_Now.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7314A561F80C2D11A6AB0E63 /* Pods-DailyFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyFeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyFeedTests/Pods-DailyFeedTests.release.xcconfig"; sourceTree = "<group>"; };
-		91DE4FD62666C66200AC6D25 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "../../../AppCodeProjects/mapkit-ios-demo-master/MapKitDemo/MapViewController.swift"; sourceTree = "<group>"; };
+		91DE4FE82667128C00AC6D25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		953C685721A071CC006750F8 /* IconTransitions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IconTransitions.json; sourceTree = "<group>"; };
+		AF59E046F0491DFBBD85B5BA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D0F173573F8F2C56C6A3483F /* Pods_DailyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D7734AD5DFC5D8F8DD5CB0 /* Pods-News Now.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News Now.release.xcconfig"; path = "Pods/Target Support Files/Pods-News Now/Pods-News Now.release.xcconfig"; sourceTree = "<group>"; };
 		E18B06086150616A4B3A60A3 /* Pods-News Now.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News Now.debug.xcconfig"; path = "Pods/Target Support Files/Pods-News Now/Pods-News Now.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +149,7 @@
 		06D04C1D1E1248DA0013B4AA /* DailyFeed */ = {
 			isa = PBXGroup;
 			children = (
+				91DE4FE82667128C00AC6D25 /* Assets.xcassets */,
 				1DAAF127242E55C300DF364F /* DailyFeed.entitlements */,
 				953C685121A070A5006750F8 /* 📦Model */,
 				953C685221A070CD006750F8 /* Views */,
@@ -197,12 +198,11 @@
 		953C685321A070EB006750F8 /* 📱Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				91DE4FD62666C66200AC6D25 /* MapViewController.swift */,
 				06D04C201E1248DB0013B4AA /* DailyFeedNewsController.swift */,
 				0635050F1E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift */,
 				06D04C4E1E1262460013B4AA /* NewsDetailViewController.swift */,
 				06529E7C1E408DC6003DA45B /* NewsDetailViewController+StateRestoration.swift */,
-				063504FB1E151C4A002510B0 /* DFSafariViewController.swift */,
+				AF59E046F0491DFBBD85B5BA /* MapViewController.swift */,
 			);
 			path = "📱Controllers";
 			sourceTree = "<group>";
@@ -333,6 +333,7 @@
 				208C18271EA3CD81007BC052 /* Settings.bundle in Resources */,
 				06D04C261E1248DB0013B4AA /* Assets.xcassets in Resources */,
 				06D04C241E1248DB0013B4AA /* Main.storyboard in Resources */,
+				91DE4FE92667128C00AC6D25 /* Assets.xcassets in Resources */,
 				207A5C261E9C1C6E00E4FC45 /* DailyFeedDetailItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,12 +453,10 @@
 				06D04C4F1E1262460013B4AA /* NewsDetailViewController.swift in Sources */,
 				2027D8AB1EEF2FDC00FE145B /* Serializable.swift in Sources */,
 				06D04C211E1248DB0013B4AA /* DailyFeedNewsController.swift in Sources */,
-				063504FC1E151C4A002510B0 /* DFSafariViewController.swift in Sources */,
 				06D04C571E13948C0013B4AA /* TSImageView.swift in Sources */,
 				0635050E1E1BA50E002510B0 /* TSSpinnerView.swift in Sources */,
 				06D04C541E13945D0013B4AA /* DailyFeedItemCell.swift in Sources */,
 				06D04C4D1E1249430013B4AA /* DailyFeedModel.swift in Sources */,
-				91DE4FD72666C66200AC6D25 /* MapViewController.swift in Sources */,
 				063505101E1BAF13002510B0 /* DailyFeedNewsController+UICollectionView.swift in Sources */,
 				06CAC5981E28A3D600EF72BB /* NewsAPI.swift in Sources */,
 				06D04C511E126BD40013B4AA /* UIImageExtension.swift in Sources */,
@@ -471,6 +470,7 @@
 				06529E7D1E408DC6003DA45B /* NewsDetailViewController+StateRestoration.swift in Sources */,
 				068496AC1E23AA2900DBD5A6 /* UIViewControllerExtension.swift in Sources */,
 				06D04C1F1E1248DB0013B4AA /* AppDelegate.swift in Sources */,
+				AF59E8B4233D7FC548821E3B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

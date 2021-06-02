@@ -138,7 +138,7 @@ class DailyFeedNewsController: UIViewController {
             spinningActivityIndicator.start()
             
             firstly {
-                NewsAPI.getNewsItems(source: source)
+                NewsAPI.getNewsItems()
             }.done { result in
                 self.newsItems = result.cats
                 self.navigationItem.title = self.sourceName

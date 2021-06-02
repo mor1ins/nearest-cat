@@ -3,13 +3,8 @@ import Foundation
 import PromiseKit
 
 enum NewsAPI {
-//
-//    case articles(source: String)
-//    case sources(category: String?, language: String?, country: String?)
-//    case search(query: String)
     
     static var baseURL = URLComponents(string: "https://60b6a11a17d1dc0017b88227.mockapi.io/")
-//    static let apiToken = "8e58842e74f2453bb5e6e3845b386a81"
     
     //NewsAPI.org API Endpoints
     static var url: URL? {
@@ -17,14 +12,9 @@ enum NewsAPI {
         guard let url = NewsAPI.baseURL?.url else { return nil }
         return url
     }
-//
-//    static func getSourceNewsLogoUrl(source: String) -> String {
-//        let sourceLogoUrl = "https://res.cloudinary.com/news-logos/image/upload/v1557987666/\(source).png"
-//        return sourceLogoUrl
-//    }
     
     
-    static func getNewsItems(source: String) -> Promise<Cats> {
+    static func getNewsItems() -> Promise<Cats> {
         
         return Promise { seal in
             guard let feedURL = NewsAPI.url else { seal.reject(JSONDecodingError.unknownError); return }
