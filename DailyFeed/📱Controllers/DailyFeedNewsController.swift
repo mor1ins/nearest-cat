@@ -36,7 +36,7 @@ class DailyFeedNewsController: UIViewController {
         }
     }
     
-    var sourceName: String = "DailyFeed"
+    var sourceName: String = "Cat spotter"
 
     let spinningActivityIndicator = TSSpinnerView()
 
@@ -165,9 +165,13 @@ class DailyFeedNewsController: UIViewController {
             }.done { result in
                 self.newsItems = result.cats
                 self.navigationItem.title = self.sourceName
-                self.newsItems.forEach { cat in
-                    cat.calcDistance(point: self.userLocation!)
+
+                if self.userLocation != nil {
+                    self.newsItems.forEach { cat in
+                        cat.calcDistance(point: self.userLocation!)
+                    }
                 }
+
                 self.newsItems.sort { a, b in a.distance < b.distance }
             }.ensure(on: .main) {
                 self.spinningActivityIndicator.stop()
@@ -271,6 +275,7 @@ extension DailyFeedNewsController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegat
 extension DailyFeedNewsController: YMKLocationDelegate {
     func onLocationUpdated(with location: YMKLocation) {
         userLocation = YMKPoint(latitude: location.position.latitude, longitude: location.position.longitude)
+        print(userLocation?.latitude, userLocation?.longitude)
     }
 
     func onLocationStatusUpdated(with status: YMKLocationStatus) {}
